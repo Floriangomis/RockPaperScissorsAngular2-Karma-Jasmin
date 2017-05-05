@@ -29,9 +29,9 @@ export class ScoreComponent implements OnInit {
         }
 
         if (result === 2) {
-            this.increaseaiScore();
+            this.decreasAiScore();
         } else if (result === 1) {
-            this.increasePlayerScore();
+            this.decreasePlayerScore();
         } else {
             return;
         }
@@ -83,11 +83,11 @@ export class ScoreComponent implements OnInit {
         }
     }
 
-    increasePlayerScore() {
+    decreasePlayerScore() {
         this.playerScore = this.playerScore - 1;
     }
 
-    increaseaiScore() {
+    decreasAiScore() {
         this.aiScore = this.aiScore - 1;
     }
 
