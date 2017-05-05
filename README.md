@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
 
+![alt Capture 1](http://hpics.li/849ba09)
+![alt Capture 2](http://hpics.li/612e2af)
 
 ## Installation
 
