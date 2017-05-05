@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
     styleUrls: ['./hand-ai.component.css']
 })
 export class HandAiComponent implements OnInit {
-    private arrayOfElements: [String] = ['Rock', 'Paper', 'Scisors'];
+    private arrayOfElements: [String] = ['Rock', 'Paper', 'Scissors'];
 
     constructor() { }
 
