@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class HandPlayerComponent implements OnInit {
 
     @Output() elementPicked = new EventEmitter();
-    @Input() canPlay: boolean = false;
+    @Input() canPlay: Boolean = false;
 
     constructor() {
 
