@@ -18,8 +18,8 @@ export class HandPlayerComponent implements OnInit {
 
     }
 
-    pickScisors() {
-        this.elementPicked.emit('Scisors');
+    pickScissors() {
+        this.elementPicked.emit('Scissors');
     }
 
     pickRock() {

@@ -17,11 +17,10 @@ describe('HandPlayerComponent', () => {
     expect(handPlayerComponent).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
+  it(`canPlay property should be equal false at creation of the component `, async(() => {
     const fixture = TestBed.createComponent(HandPlayerComponent);
     const handPlayerComponent = fixture.debugElement.componentInstance;
     expect(handPlayerComponent.canPlay).toEqual(false);
   }));
-
 
 });
