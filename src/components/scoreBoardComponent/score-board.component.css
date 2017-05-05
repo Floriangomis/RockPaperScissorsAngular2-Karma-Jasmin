@@ -1,0 +1,63 @@
+.ia-score {
+    position: absolute;
+    top: 148px;
+    left: 30px;
+    font-family: monospace;
+    color: white;
+    background-color: rgba(0,0,0,.8);
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.player-score {
+    position: absolute;
+    top: 348px;
+    left: 30px;
+    font-family: monospace;
+    color: white;
+    background-color: rgba(0,0,0,.8);
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.result {
+    opacity: 0;
+    transition-duration: 800ms;
+
+    position: absolute;
+    left: 140px;
+    top: 20vh;
+    font-size: 70px;
+    color: white;
+    background-color: rgba(0,0,0,.8);
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    font-family: monospace;
+}
+
+.result.active {
+    opacity: 1;
+}
+.timeleft {
+
+    opacity: 0;
+    transition-duration: 800ms;
+
+    font-family: monospace;
+    position: absolute;
+    left: 702px;
+    top: 20vh;
+    font-size: 70px;
+    color: white;
+    background-color: rgba(0,0,0,.8);
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.timeleft.active {
+    opacity: 1;
+}

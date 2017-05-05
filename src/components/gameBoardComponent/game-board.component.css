@@ -1,0 +1,37 @@
+.game-board-container {
+    padding-top: 20px;
+}
+
+.surface {
+    width: 500px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, .1);
+    text-align: center;
+    line-height: 12;
+}
+
+.surface .ai {
+    color: red;
+}
+
+.surface .player {
+    color: blue;
+}
+
+.btn {
+    transition-duration: 500ms;
+    opacity: 1;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 23px;
+    letter-spacing: 2px;
+    background-color: rgba(0,0,0, .8);
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:disabled {
+    opacity: 0;
+}

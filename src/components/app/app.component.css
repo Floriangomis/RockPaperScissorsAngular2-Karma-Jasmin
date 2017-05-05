@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+}
+
+.board-game {
+    width: 500px;
+    margin-left: 20px;
+
+    text-align: center;
+}
+
+.board-score-container {
+    width: 100px;
+}

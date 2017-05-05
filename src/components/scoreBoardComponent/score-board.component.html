@@ -1,0 +1,16 @@
+<div class="score-container">
+    <div class="ia-score">
+        {{ aiScore }} AI
+    </div>
+    <div class="player-score">
+        {{ playerScore }} You
+    </div>
+
+    <div [class.active]="finalScore" class="result">
+        {{ finalScore }}
+    </div>
+
+    <div [class.active]="timeleft" class="timeleft">
+        {{ timeleft }} Before new game.
+    </div>
+</div>

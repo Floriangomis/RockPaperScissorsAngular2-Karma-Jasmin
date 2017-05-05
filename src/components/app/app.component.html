@@ -1,0 +1,11 @@
+<div class="container">
+  
+  <div class="board-score-container">
+    <score-board (resetGame)="handleResetGame($event)"></score-board>
+  </div>
+
+  <div class="board-game">
+    <game-board (sendResult)="handleResult($event)"></game-board>
+  </div>
+
+</div>
