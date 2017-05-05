@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, Output, EventEmitter, PipeTransform, Pipe} from '@angular/core';
 import { HandAiComponent } from '../handAiComponent/hand-ai.component';
 
 @Component({
@@ -8,8 +8,9 @@ import { HandAiComponent } from '../handAiComponent/hand-ai.component';
 })
 export class GameComponent implements OnInit {
 
-    private handPlayer: String = 'Nothing Picked';
-    private handAi: String = 'Nothing Picked';
+    private handPlayer: String = 'Nothing Picked Yet';
+    private handAi: String = 'Nothing Picked Yet';
+
     @Output() sendResult = new EventEmitter();
     @ViewChild(HandAiComponent) handAiComponent: HandAiComponent;
     private canUserPlay: Boolean = false;
@@ -30,7 +31,7 @@ export class GameComponent implements OnInit {
             case 'Rock':
                 if (this.handAi === 'Paper') {
                     this.sendResult.emit(1);
-                } else if (this.handAi === 'Scisors') {
+                } else if (this.handAi === 'Scissors') {
                     this.sendResult.emit(2);
                 } else if (this.handAi === 'Rock') {
                     this.sendResult.emit(3);
@@ -39,16 +40,16 @@ export class GameComponent implements OnInit {
             case 'Paper':
                 if (this.handAi === 'Paper') {
                     this.sendResult.emit(3);
-                } else if (this.handAi === 'Scisors') {
+                } else if (this.handAi === 'Scissors') {
                     this.sendResult.emit(1);
                 } else if (this.handAi === 'Rock') {
                     this.sendResult.emit(2);
                 }
                 break;
-            case 'Scisors':
+            case 'Scissors':
                 if (this.handAi === 'Paper') {
                     this.sendResult.emit(2);
-                } else if (this.handAi === 'Scisors') {
+                } else if (this.handAi === 'Scissors') {
                     this.sendResult.emit(3);
                 } else if (this.handAi === 'Rock') {
                     this.sendResult.emit(1);
@@ -65,7 +66,30 @@ export class GameComponent implements OnInit {
 
     reset() {
         this.canUserPlay = false;
-        this.handPlayer = 'Nothing Picked';
-        this.handAi = 'Nothing Picked';
+        this.handPlayer = 'Nothing Picked Yet';
+        this.handAi = 'Nothing Picked Yet';
     }
+}
+
+
+@Pipe({name: 'elementToPicture'})
+export class ElementToPictureTransform implements PipeTransform {
+  transform(element: String): String {
+    let pathToImage: String = '/assets/pictures/';
+    switch (element) {
+        case 'Rock':
+            pathToImage = pathToImage + 'rock.png';
+            break;
+        case 'Paper':
+            pathToImage = pathToImage + 'paper.png';
+            break;
+        case 'Scissors':
+            pathToImage = pathToImage + 'scissors.png';
+            break;
+        default:
+            pathToImage = 'Nothing Picked Yet';
+            break;
+    }
+    return pathToImage;
+  }
 }

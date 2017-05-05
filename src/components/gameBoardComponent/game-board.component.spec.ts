@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 
-import { GameComponent } from './game-board.component';
+import { GameComponent, ElementToPictureTransform} from './game-board.component';
 import { HandPlayerComponent } from '../handPlayerComponent/hand-player.component';
 import { HandAiComponent } from '../handAiComponent/hand-ai.component';
 
@@ -10,7 +10,8 @@ describe('GameComponent', () => {
       declarations: [
         GameComponent,
         HandPlayerComponent,
-        HandAiComponent
+        HandAiComponent,
+        ElementToPictureTransform
       ],
     }).compileComponents();
   }));
@@ -49,8 +50,8 @@ describe('GameComponent', () => {
     gameComponent.handleUserPick('Rock');
     expect(gameComponent.handPlayer).toEqual('Rock');
     gameComponent.reset();
-    expect(gameComponent.handPlayer).toEqual('Nothing Picked');
-    expect(gameComponent.handAi).toEqual('Nothing Picked');
+    expect(gameComponent.handPlayer).toEqual('Nothing Picked Yet');
+    expect(gameComponent.handAi).toEqual('Nothing Picked Yet');
     expect(gameComponent.canUserPlay).toEqual(false);
   }));
 });

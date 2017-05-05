@@ -35,3 +35,8 @@
 .btn:disabled {
     opacity: 0;
 }
+
+.element-picture {
+    width: 40px;
+    height: auto;
+}

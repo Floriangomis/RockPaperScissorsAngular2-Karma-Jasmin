@@ -7,7 +7,7 @@ import { AppComponent } from './components/app/app.component';
 import { ScoreComponent } from './components/scoreBoardComponent/score-board.component';
 import { HandPlayerComponent } from './components/handPlayerComponent/hand-player.component';
 import { HandAiComponent } from './components/handAiComponent/hand-ai.component';
-import { GameComponent } from './components/gameBoardComponent/game-board.component';
+import { GameComponent, ElementToPictureTransform } from './components/gameBoardComponent/game-board.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { GameComponent } from './components/gameBoardComponent/game-board.compon
     ScoreComponent,
     GameComponent,
     HandPlayerComponent,
-    HandAiComponent
+    HandAiComponent,
+    ElementToPictureTransform
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,21 @@
 <div>
-    <input type="button" class="btn" name="start" value="start game" [disabled]="canUserPlay" (click)="launchGame()">
+    <input type="button" class="btn" name="start" value="New Game" [disabled]="canUserPlay" (click)="launchGame()">
 </div>
 
 <div class="game-board-container">
     <div class="surface">
         <span class="ai">
-            {{ handAi }} 
+            <!-- TO DO : Improve that Part -->
+            <img *ngIf="handAi!=='Nothing Picked Yet'" class="element-picture" src="{{ handAi | elementToPicture }}" alt="">
+            <span *ngIf="handAi==='Nothing Picked Yet'"> {{ handAi | elementToPicture }} </span>
         </span>
     </div>
     <hr />
     <div class="surface">
         <span class="player"> 
-            {{ handPlayer }} 
+            <!-- TO DO : Improve that Part -->
+            <img *ngIf="handPlayer!=='Nothing Picked Yet'" class="element-picture" src="{{ handPlayer | elementToPicture }}" alt="">
+            <span *ngIf="handPlayer==='Nothing Picked Yet'"> {{ handAi | elementToPicture }} </span>
         </span>
     </div>
     <hand-player #handAiComponent [canPlay]="canUserPlay" (elementPicked)="handleUserPick($event)"></hand-player>
